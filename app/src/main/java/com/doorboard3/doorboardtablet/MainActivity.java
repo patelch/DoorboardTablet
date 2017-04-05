@@ -16,9 +16,10 @@
     import android.view.MenuItem;
     import android.view.View;
     import android.view.ViewGroup;
-    import android.view.animation.Animation;
 
     import android.view.animation.AnimationUtils;
+    import android.widget.ImageView;
+    import android.widget.RadioGroup;
 
 
     public class MainActivity extends AppCompatActivity
@@ -54,7 +55,6 @@
 
             TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
             tabLayout.setupWithViewPager(mViewPager);
-
         }
 
 
@@ -63,6 +63,27 @@
             // Inflate the menu; this adds items to the action bar if it is present.
             getMenuInflater().inflate(R.menu.menu_main, menu);
             return true;
+        }
+
+        public void onFloorToggle(View view) {
+
+            ((RadioGroup)findViewById(R.id.floor_toggle)).check(view.getId());
+            ImageView floorMap = (ImageView) findViewById(R.id.floor_map);
+
+            switch (view.getId()) {
+                case R.id.floor_g:
+                    floorMap.setImageResource(R.drawable.ground_floor);
+                    break;
+                case R.id.floor_1:
+                    floorMap.setImageResource(R.drawable.first_floor);
+                    break;
+                case R.id.floor_2:
+                case R.id.floor_3:
+                case R.id.floor_4:
+                case R.id.floor_5:
+                    floorMap.setImageResource(R.drawable.upper_floor);
+                    break;
+            }
         }
 
     //    @Override
@@ -100,11 +121,11 @@
                     case 0:
                         return infoFragment;
                     case 1:
-                        return infoFragment;
+                        return new MapFragment();
                     case 2:
                         return infoFragment;
                     case 3:
-                        return infoFragment;
+                        return new SearchFragment();
                     default:
                         return null;
                 }
