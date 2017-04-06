@@ -33,15 +33,11 @@ public class MapFragment extends Fragment {
         // Required empty public constructor
     }
 
-//
-//    public static MapFragment newInstance(String param1, String param2) {
-//        MapFragment fragment = new MapFragment();
-//        Bundle args = new Bundle();
-////        args.putString(ARG_PARAM1, param1);
-////        args.putString(ARG_PARAM2, param2);
-//        fragment.setArguments(args);
-//        return fragment;
-//    }
+
+    public static MapFragment newInstance() {
+        MapFragment fragment = new MapFragment();
+        return fragment;
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -75,15 +71,13 @@ public class MapFragment extends Fragment {
         floorToggle = (RadioGroup) view.findViewById(R.id.floor_toggle);
         floorToggle.setOnCheckedChangeListener(ToggleListener);
 
-//        floorMap = (ImageView) view.findViewById(R.id.floor_map);
         floorMap = (PhotoView) view.findViewById(R.id.floor_map);
 
-        // TODO: change based on which floor the board is on
+        // door board is for room 003 -- first floor
         floorG.setChecked(true);
         floorMap.setImageResource(R.drawable.ground_floor);
 
         return view;
-
     }
 
 

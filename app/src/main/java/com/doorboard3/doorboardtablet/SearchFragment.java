@@ -44,14 +44,10 @@ public class SearchFragment extends Fragment {
         // Required empty public constructor
     }
 
-//    public static SearchFragment newInstance(String param1, String param2) {
-//        SearchFragment fragment = new SearchFragment();
-//        Bundle args = new Bundle();
-//        args.putString(ARG_PARAM1, param1);
-//        args.putString(ARG_PARAM2, param2);
-//        fragment.setArguments(args);
-//        return fragment;
-//    }
+    public static SearchFragment newInstance() {
+        SearchFragment fragment = new SearchFragment();
+        return fragment;
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {

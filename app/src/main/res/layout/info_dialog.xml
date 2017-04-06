@@ -4,35 +4,48 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/dialog_name"
+    <RelativeLayout
+        android:id="@+id/header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/contents"
-        android:layout_alignParentRight="false"
-        android:layout_toLeftOf="@+id/dialog_close"
-        android:layout_weight="0.39"
-        android:paddingLeft="38dp"
-        android:text="TextView"
-        android:textSize="24sp" />
+        android:background="@color/colorPrimary">
 
-    <ImageButton
-        android:id="@+id/dialog_close"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="false"
-        android:layout_alignParentRight="true"
-        android:layout_centerHorizontal="false"
-        android:layout_weight="1"
-        android:adjustViewBounds="true"
-        android:cropToPadding="false"
-        app:srcCompat="@drawable/ic_close_black_24dp" />
+        <TextView
+            android:id="@+id/dialog_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="false"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/dialog_close"
+            android:layout_weight="0.39"
+            android:paddingLeft="38dp"
+            android:text="TextView"
+            android:textSize="24sp" />
+
+        <ImageButton
+            android:id="@+id/dialog_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="false"
+            android:layout_alignParentRight="true"
+            android:layout_centerHorizontal="false"
+            android:layout_centerVertical="true"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:cropToPadding="false"
+            android:paddingRight="5dp"
+            android:scaleX="1.2"
+            android:scaleY="1.2"
+            app:srcCompat="@drawable/ic_close_black_24dp" />
+    </RelativeLayout>
 
     <LinearLayout
-        android:id="@+id/contents"
+        android:id="@+id/content"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/dialog_close"
+        android:layout_below="@+id/header"
         android:layout_weight="1"
         android:orientation="horizontal"
         android:paddingTop="20dp">
@@ -101,9 +114,10 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/nav"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/contents"
+        android:layout_below="@+id/content"
         android:layout_weight="1"
         android:orientation="vertical">
 
@@ -111,11 +125,9 @@
             android:id="@+id/positions"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_below="@+id/contents"
-            android:layout_marginBottom="10dp"
             android:layout_marginLeft="38dp"
             android:layout_marginRight="38dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="40dp"
             android:layout_weight="1"
             android:orientation="horizontal">
 
@@ -143,11 +155,9 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_below="@+id/positions"
             android:layout_marginLeft="38dp"
             android:layout_marginRight="38dp"
-            android:layout_weight="6"
-            android:orientation="horizontal">
+            android:layout_weight="4">
 
             <com.github.chrisbanes.photoview.PhotoView
                 android:id="@+id/start_map"
@@ -175,7 +185,6 @@
                 android:layout_toRightOf="@+id/floor_toggle"
                 android:layout_weight="1"
                 app:srcCompat="@drawable/floor_end" />
-
         </LinearLayout>
 
     </LinearLayout>

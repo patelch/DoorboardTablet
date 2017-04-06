@@ -31,9 +31,10 @@
             <TextView
                 android:layout_width="275dp"
                 android:layout_height="wrap_content"
-                android:text="\tProfile:"
-                android:textColor="#525252"
-                android:textSize="20dp" />
+                android:text="\tRoom 003 Profile:"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="27dp" />
             <TextView
                 android:layout_width="275dp"
                 android:layout_height="69dp"
@@ -97,6 +98,10 @@
                 />
         </LinearLayout>
     </ScrollView>
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@android:color/darker_gray" />
 
     <android.support.v7.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/message_list"
