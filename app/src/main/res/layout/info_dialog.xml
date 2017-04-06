@@ -102,39 +102,81 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_below="@+id/contents"
-        android:layout_marginLeft="38dp"
-        android:layout_marginRight="38dp"
         android:layout_weight="1"
-        android:orientation="horizontal">
+        android:orientation="vertical">
 
-        <com.github.chrisbanes.photoview.PhotoView
-            android:id="@+id/start_map"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="false"
-            android:layout_centerInParent="false"
-            android:layout_centerVertical="false"
-            android:layout_toRightOf="@+id/floor_toggle"
+        <LinearLayout
+            android:id="@+id/positions"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_below="@+id/contents"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="38dp"
+            android:layout_marginRight="38dp"
+            android:layout_marginTop="30dp"
             android:layout_weight="1"
-            app:srcCompat="@drawable/floor_start" />
+            android:orientation="horizontal">
 
-        <Space
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight=".1" />
+            <TextView
+                android:id="@+id/start_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Current Location"
+                android:textSize="18sp" />
 
-        <com.github.chrisbanes.photoview.PhotoView
-            android:id="@+id/end_map"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="false"
-            android:layout_centerInParent="false"
-            android:layout_centerVertical="true"
-            android:layout_toRightOf="@+id/floor_toggle"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/floor_end" />
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".1" />
+
+            <TextView
+                android:id="@+id/end_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_below="@+id/positions"
+            android:layout_marginLeft="38dp"
+            android:layout_marginRight="38dp"
+            android:layout_weight="6"
+            android:orientation="horizontal">
+
+            <com.github.chrisbanes.photoview.PhotoView
+                android:id="@+id/start_map"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="false"
+                android:layout_centerInParent="false"
+                android:layout_centerVertical="false"
+                android:layout_toRightOf="@+id/floor_toggle"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/floor_start" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".1" />
+
+            <com.github.chrisbanes.photoview.PhotoView
+                android:id="@+id/end_map"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="false"
+                android:layout_centerInParent="false"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/floor_toggle"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/floor_end" />
+
+        </LinearLayout>
 
     </LinearLayout>
 

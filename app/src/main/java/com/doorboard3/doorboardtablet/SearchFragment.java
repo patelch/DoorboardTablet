@@ -105,6 +105,9 @@ public class SearchFragment extends Fragment {
                 TextView email = (TextView) dialog.findViewById(R.id.dialog_email);
                 email.setText(person.getEmail());
 
+                TextView endText = (TextView) dialog.findViewById(R.id.end_text);
+                endText.setText("Room " + person.getRoomNum());
+
                 ImageView image = (ImageView) dialog.findViewById(R.id.dialog_image);
                 image.setImageResource(person.getImage());
 
