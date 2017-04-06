@@ -2,15 +2,106 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.doorboard3.doorboardtablet.InfoFragment">
+    tools:context="com.doorboard3.doorboardtablet.InfoFragment"
+    android:baselineAligned="false">
 
-    <android.support.v7.widget.RecyclerView
-        xmlns:android="http://schemas.android.com/apk/res/android"
+    <!--<TextView-->
+    <!--android:id="@+id/name"-->
+    <!--android:layout_width="500dp"-->
+    <!--android:layout_height="800dp"-->
+    <!--android:layout_alignParentRight="true"-->
+    <!--android:textColor="?android:attr/textColorPrimary"-->
+    <!--android:textSize="15sp"-->
+    <!--android:textStyle="bold" />-->
+
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="275dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1.28"
+        android:fillViewport="true">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="275dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:baselineAligned="false">
+
+            <TextView
+                android:layout_width="275dp"
+                android:layout_height="wrap_content"
+                android:text="\tProfile:"
+                android:textColor="#525252"
+                android:textSize="20dp" />
+            <TextView
+                android:layout_width="275dp"
+                android:layout_height="69dp"
+                android:text="\tDaniel Chen"
+                android:textColor="#525252"
+                android:textStyle="bold"
+                android:textSize="30dp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="242dp"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_profile_1" />
+            <TextView
+                android:layout_width="275dp"
+                android:layout_height="wrap_content"
+                android:text="\tEmail: \n\t cmsc434@umd.edu\n\tPhone: \n\t 111-222-3333"
+                android:textSize="20dp"
+                android:textColor="#525252"
+                />
+
+            <TextView
+                android:layout_width="275dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.28"
+                android:text="\tInfo: \n\t Here is my info! "
+                android:textSize="20dp"
+                android:textColor="#525252"
+                />
+            <TextView
+                android:layout_width="275dp"
+                android:layout_height="wrap_content"
+                android:text="\n\tTestudo"
+                android:textColor="#525252"
+                android:textStyle="bold"
+                android:textSize="30dp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="242dp"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_profile_2" />
+            <TextView
+                android:layout_width="275dp"
+                android:layout_height="wrap_content"
+                android:text="\tWebsite: \n\t testudo.umd.edu\n\tEmail: \n\t testudo@umd.edu"
+                android:textSize="20dp"
+                android:textColor="#525252"
+                />
+            <TextView
+                android:layout_width="275dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.28"
+                android:text="\tInfo: \n\t I am University of Maryland's \n\t mascot! \n\n"
+                android:textSize="20dp"
+                android:textColor="#525252"
+                />
+        </LinearLayout>
+    </ScrollView>
+
+    <android.support.v7.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/message_list"
-        android:layout_width="match_parent"
-        android:layout_height="0px"
-        android:layout_weight="7.38"
-        />
+        android:layout_width="500dp"
+        android:layout_height="match_parent"
+        android:layout_weight="7.38" />
 
 </LinearLayout>
