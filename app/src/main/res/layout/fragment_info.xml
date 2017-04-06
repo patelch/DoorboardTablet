@@ -97,7 +97,7 @@
                 android:layout_width="246dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1.28"
-                android:text="\tInfo: \n\t I am University of Maryland's \n\t mascot! \n\n"
+                android:text="\tInfo: \n\t I am University of \n\t Maryland's mascot! \n\n"
                 android:textColor="#525252"
                 android:textSize="20dp" />
         </LinearLayout>
