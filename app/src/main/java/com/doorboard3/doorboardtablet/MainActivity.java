@@ -122,20 +122,16 @@ import android.widget.RadioGroup;
 
             @Override
             public Fragment getItem(int position) {
-                // getItem is called to instantiate the fragment for the given page.
-                // Return a PlaceholderFragment (defined as a static inner class below).
-    //            return PlaceholderFragment.newInstance(position + 1);
 
-                InfoFragment infoFragment = InfoFragment.newInstance();
                 switch (position) {
                     case 0:
-                        return infoFragment;
+                        return InfoFragment.newInstance();
                     case 1:
-                        return new MapFragment();
-                    case 2:
                         return ScheduleFragment.newInstance();
+                    case 2:
+                        return MapFragment.newInstance();
                     case 3:
-                        return new SearchFragment();
+                        return SearchFragment.newInstance();
                     default:
                         return null;
                 }
@@ -153,9 +149,9 @@ import android.widget.RadioGroup;
                     case 0:
                         return "info";
                     case 1:
-                        return "map";
+                        return "schedule";
                     case 2:
-                        return "calendar";
+                        return "map";
                     case 3:
                         return "find room owner";
                     default:
