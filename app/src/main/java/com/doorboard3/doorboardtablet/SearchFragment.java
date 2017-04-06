@@ -67,13 +67,15 @@ public class SearchFragment extends Fragment {
         search = (AutoCompleteTextView) view.findViewById(R.id.search_rooms);
 
 
+        String description = "Hi, I work in the Computer Science department at UMD. I am interested in graphics and robotics. I like the color yellow and my favorite book is the Alchemist.";
+
         ArrayList<RoomOwner> data = new ArrayList<RoomOwner>();
-        data.add(new RoomOwner("Professor A", "some stuff", R.drawable.user, "001", "profA@cs.umd.edu", "(123) 456 - 7890"));
-        data.add(new RoomOwner("Professor B", "some stuff", R.drawable.user, "002", "profB@cs.umd.edu", "(123) 456 - 7890"));
-        data.add(new RoomOwner("Teacher A", "some stuff", R.drawable.user, "101", "teachA@cs.umd.edu", "(123) 456 - 7890"));
-        data.add(new RoomOwner("Teacher B", "some stuff", R.drawable.user, "201", "teachB@cs.umd.edu", "(123) 456 - 7890"));
-        data.add(new RoomOwner("TA A", "some stuff", R.drawable.user, "301", "taA@cs.umd.edu", "(123) 456 - 7890"));
-        data.add(new RoomOwner("TA B", "some stuff", R.drawable.user, "402", "taB@cs.umd.edu", "(123) 456 - 7890"));
+        data.add(new RoomOwner("Professor A", description, R.drawable.user, "001", "profA@cs.umd.edu", "(123) 456 - 7890"));
+        data.add(new RoomOwner("Professor B", description, R.drawable.user, "002", "profB@cs.umd.edu", "(123) 456 - 7890"));
+        data.add(new RoomOwner("Teacher A", description, R.drawable.user, "101", "teachA@cs.umd.edu", "(123) 456 - 7890"));
+        data.add(new RoomOwner("Teacher B", description, R.drawable.user, "201", "teachB@cs.umd.edu", "(123) 456 - 7890"));
+        data.add(new RoomOwner("TA A", description, R.drawable.user, "301", "taA@cs.umd.edu", "(123) 456 - 7890"));
+        data.add(new RoomOwner("TA B", description, R.drawable.user, "402", "taB@cs.umd.edu", "(123) 456 - 7890"));
         final SearchAdapter adapter = new SearchAdapter(view.getContext(), R.layout.fragment_search, data);
         search.setAdapter(adapter);
 
