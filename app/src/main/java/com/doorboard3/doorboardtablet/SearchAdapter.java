@@ -11,6 +11,7 @@ import android.widget.Filter;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
@@ -82,6 +83,11 @@ public class SearchAdapter extends ArrayAdapter<RoomOwner> {
                 FilterResults filterResults = new FilterResults();
                 filterResults.values = suggestions;
                 filterResults.count = suggestions.size();
+
+                if (filterResults.count == 0) {
+                    Toast.makeText(getContext(), "No matching results found", Toast.LENGTH_LONG).show();
+                }
+
                 return filterResults;
             } else {
                 return new FilterResults();
