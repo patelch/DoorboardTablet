@@ -116,7 +116,7 @@
                 // Return a PlaceholderFragment (defined as a static inner class below).
     //            return PlaceholderFragment.newInstance(position + 1);
 
-                InfoFragment infoFragment = new InfoFragment();
+                InfoFragment infoFragment = InfoFragment.newInstance();
                 switch (position) {
                     case 0:
                         return infoFragment;
