@@ -23,10 +23,10 @@ public class Populator {
         SQLiteDatabase wdb = dbHelper.getWritableDatabase();
 
         // Check to see if entries have not already been added
-        if (!dbHelper.roomContainsMessages("Iribe 203")) {
+        if (!dbHelper.roomContainsMessages("Iribe 003")) {
             // Create dummy user 1
             ContentValues values = new ContentValues();
-            values.put(DoorboardContract.MessageEntry.COLUMN_NAME_ROOM, "Iribe 203");
+            values.put(DoorboardContract.MessageEntry.COLUMN_NAME_ROOM, "Iribe 003");
             values.put(DoorboardContract.MessageEntry.COLUMN_NAME_NAME, "Daniel Chen");
             values.put(DoorboardContract.MessageEntry.COLUMN_NAME_STATUS, "Will be 5 min late");
             Bitmap b1 = BitmapFactory.decodeResource(ctx.getResources(), R.mipmap.ic_profile_1);
@@ -38,7 +38,7 @@ public class Populator {
 
             // Create dummy user 2
             values = new ContentValues();
-            values.put(DoorboardContract.MessageEntry.COLUMN_NAME_ROOM, "Iribe 203");
+            values.put(DoorboardContract.MessageEntry.COLUMN_NAME_ROOM, "Iribe 003");
             values.put(DoorboardContract.MessageEntry.COLUMN_NAME_NAME, "Testudo");
             values.put(DoorboardContract.MessageEntry.COLUMN_NAME_STATUS, "Out to lunch. Be back at 1");
             Bitmap b2 = BitmapFactory.decodeResource(ctx.getResources(), R.mipmap.ic_profile_2);
@@ -53,7 +53,7 @@ public class Populator {
         if (!dbHelper.roomContainsMessages("Iribe 304")) {
             // Create dummy user 3
             ContentValues values = new ContentValues();
-            values.put(DoorboardContract.MessageEntry.COLUMN_NAME_ROOM, "Iribe 304");
+            values.put(DoorboardContract.MessageEntry.COLUMN_NAME_ROOM, "Iribe 003");
             values.put(DoorboardContract.MessageEntry.COLUMN_NAME_NAME, "Eric Cartman");
             values.put(DoorboardContract.MessageEntry.COLUMN_NAME_STATUS, "At a meeting until 2");
             Bitmap b1 = BitmapFactory.decodeResource(ctx.getResources(), R.mipmap.ic_profile_3);
@@ -65,7 +65,7 @@ public class Populator {
 
             // Create dummy user 4
             values = new ContentValues();
-            values.put(DoorboardContract.MessageEntry.COLUMN_NAME_ROOM, "Iribe 304");
+            values.put(DoorboardContract.MessageEntry.COLUMN_NAME_ROOM, "Iribe 003");
             values.put(DoorboardContract.MessageEntry.COLUMN_NAME_NAME, "Scooby");
             values.put(DoorboardContract.MessageEntry.COLUMN_NAME_STATUS, "Out solving mysteries. Be back in an hour");
             Bitmap b2 = BitmapFactory.decodeResource(ctx.getResources(), R.mipmap.ic_profile_4);
@@ -88,7 +88,7 @@ public class Populator {
             values.put(DoorboardContract.ScheduleEntry.COLUMN_NAME_NAME, "Test 1");
             values.put(DoorboardContract.ScheduleEntry.COLUMN_NAME_START_TIME, "14:30");
             values.put(DoorboardContract.ScheduleEntry.COLUMN_NAME_END_TIME, "15:00");
-            values.put(DoorboardContract.ScheduleEntry.COLUMN_NAME_ROOM, "Iribe 203");
+            values.put(DoorboardContract.ScheduleEntry.COLUMN_NAME_ROOM, "Iribe 003");
             values.put(DoorboardContract.ScheduleEntry.COLUMN_NAME_DESCRIPTION, "Test 1");
             wdb.insert(DoorboardContract.ScheduleEntry.TABLE_NAME, null, values);
 
@@ -97,8 +97,8 @@ public class Populator {
             values.put(DoorboardContract.ScheduleEntry.COLUMN_NAME_NAME, "Test 3");
             values.put(DoorboardContract.ScheduleEntry.COLUMN_NAME_START_TIME, "08:00");
             values.put(DoorboardContract.ScheduleEntry.COLUMN_NAME_END_TIME, "09:00");
-            values.put(DoorboardContract.ScheduleEntry.COLUMN_NAME_ROOM, "Iribe 304");
-            values.put(DoorboardContract.ScheduleEntry.COLUMN_NAME_DESCRIPTION, "Test 3");
+            values.put(DoorboardContract.ScheduleEntry.COLUMN_NAME_ROOM, "Iribe 003");
+            values.put(DoorboardContract.ScheduleEntry.COLUMN_NAME_DESCRIPTION, "Test 2");
             wdb.insert(DoorboardContract.ScheduleEntry.TABLE_NAME, null, values);
 
             values = new ContentValues();
@@ -106,8 +106,8 @@ public class Populator {
             values.put(DoorboardContract.ScheduleEntry.COLUMN_NAME_NAME, "Test 2");
             values.put(DoorboardContract.ScheduleEntry.COLUMN_NAME_START_TIME, "08:00");
             values.put(DoorboardContract.ScheduleEntry.COLUMN_NAME_END_TIME, "09:00");
-            values.put(DoorboardContract.ScheduleEntry.COLUMN_NAME_ROOM, "Iribe 304");
-            values.put(DoorboardContract.ScheduleEntry.COLUMN_NAME_DESCRIPTION, "Test 2");
+            values.put(DoorboardContract.ScheduleEntry.COLUMN_NAME_ROOM, "Iribe 003");
+            values.put(DoorboardContract.ScheduleEntry.COLUMN_NAME_DESCRIPTION, "Test 3");
             wdb.insert(DoorboardContract.ScheduleEntry.TABLE_NAME, null, values);
         }
     }

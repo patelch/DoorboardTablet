@@ -1,21 +1,15 @@
 package com.doorboard3.doorboardtablet;
 
-import android.content.Context;
-import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.ListFragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
-import java.util.ArrayList;
 import android.view.ViewGroup;
 
-
-import static android.content.ContentValues.TAG;
+import java.util.ArrayList;
 
 
 public class InfoFragment extends Fragment {
@@ -51,7 +45,7 @@ public class InfoFragment extends Fragment {
         dbHelper = new DoorboardDbHelper(getContext());
 
         // Populate db with test data
-        Populator populator = new Populator(dbHelper, getContext());
+        Populator populator = new Populator(dbHelper, getActivity());
         populator.populate();
         Log.i(TAG, "Populate db with test data");
 
@@ -66,15 +60,15 @@ public class InfoFragment extends Fragment {
             Log.i(TAG, "UPDATE is true");
             room = bundle.getString("ROOM");
         } else {
-            room = "Iribe 203";
+            room = "Iribe 003";
         }
         Log.i(TAG, "Room: " + room);
 
         // Get messages
         mRecyclerView = (RecyclerView) v.findViewById(R.id.message_list);
-        mAdapter = new MessageAdapter(dbHelper.getMessagesForRoom("Iribe 203"));
+        mAdapter = new MessageAdapter(dbHelper.getMessagesForRoom("Iribe 003"));
 
-        ArrayList<Message> data = dbHelper.getMessagesForRoom("Iribe 203");
+        ArrayList<Message> data = dbHelper.getMessagesForRoom("Iribe 003");
         for(Message d:data){
             Log.i(TAG, "Message: "+ d.getStatus());
         }
