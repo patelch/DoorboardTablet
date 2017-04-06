@@ -39,7 +39,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:completionThreshold="1"
-                android:hint="Search names or room numbers"
+                android:hint="Search by name of room owner"
                 android:textSize="20sp" />
 
         </RelativeLayout>

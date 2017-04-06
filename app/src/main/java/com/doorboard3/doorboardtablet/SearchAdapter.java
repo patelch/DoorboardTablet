@@ -75,8 +75,7 @@ public class SearchAdapter extends ArrayAdapter<RoomOwner> {
                 for (RoomOwner person : tempItems) {
                     String name = person.getName();
                     String roomNum = person.getRoomNum();
-                    if (name.toLowerCase().contains(constraint.toString().toLowerCase())
-                            || roomNum.toLowerCase().contains(constraint.toString().toLowerCase())) {
+                    if (name.toLowerCase().contains(constraint.toString().toLowerCase())) {
                         suggestions.add(person);
                     }
                 }

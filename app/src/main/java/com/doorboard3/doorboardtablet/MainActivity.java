@@ -167,7 +167,7 @@
                     case 2:
                         return "calendar";
                     case 3:
-                        return "search";
+                        return "find room owner";
                     default:
                         return null;
                 }
