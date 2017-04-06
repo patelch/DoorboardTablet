@@ -12,12 +12,16 @@ public class RoomOwner {
     private String description;
     private int image;
     private String roomNum;
+    private String email;
+    private String phoneNumber;
 
-    public RoomOwner(String name, String description, int image, String roomNum) {
+    public RoomOwner(String name, String description, int image, String roomNum, String email, String phoneNumber) {
         this.name = name;
         this.description = description;
         this.image = image;
         this.roomNum = roomNum;
+        this.email = email;
+        this.phoneNumber = phoneNumber;
     }
 
     public String getName() {
@@ -36,6 +40,12 @@ public class RoomOwner {
         return roomNum;
     }
 
+    public String getEmail() {
+        return email;
+    }
 
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
 
 }

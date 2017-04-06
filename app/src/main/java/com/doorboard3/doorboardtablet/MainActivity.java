@@ -1,6 +1,7 @@
     package com.doorboard3.doorboardtablet;
 
     import android.content.Intent;
+    import android.graphics.RectF;
     import android.support.design.widget.TabLayout;
     import android.support.v7.app.AppCompatActivity;
     import android.support.v7.widget.Toolbar;
@@ -20,6 +21,9 @@
     import android.view.animation.AnimationUtils;
     import android.widget.ImageView;
     import android.widget.RadioGroup;
+    import android.widget.Toast;
+
+    import java.util.Calendar;
 
 
     public class MainActivity extends AppCompatActivity
@@ -56,6 +60,22 @@
             TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
             tabLayout.setupWithViewPager(mViewPager);
         }
+
+//        protected String getEventTitle(Calendar time) {
+//            return String.format("Event of %02d:%02d %s/%d", time.get(Calendar.HOUR_OF_DAY), time.get(Calendar.MINUTE), time.get(Calendar.MONTH)+1, time.get(Calendar.DAY_OF_MONTH));
+//        }
+//
+//        public void onEventClick(WeekViewEvent event, RectF eventRect) {
+//            Toast.makeText(this, "Clicked " + event.getName(), Toast.LENGTH_SHORT).show();
+//        }
+//
+//        public void onEventLongPress(WeekViewEvent event, RectF eventRect) {
+//            Toast.makeText(this, "Long pressed event: " + event.getName(), Toast.LENGTH_SHORT).show();
+//        }
+//
+//        public void onEmptyViewLongPress(Calendar time) {
+//            Toast.makeText(this, "Empty view long pressed: " + getEventTitle(time), Toast.LENGTH_SHORT).show();
+//        }
 
 
         @Override
