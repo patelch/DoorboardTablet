@@ -13,6 +13,8 @@ import android.widget.ImageView;
 import android.widget.RadioGroup;
 import android.widget.ToggleButton;
 
+import com.github.chrisbanes.photoview.PhotoView;
+
 public class MapFragment extends Fragment {
 
     private RadioGroup floorToggle;
@@ -22,7 +24,8 @@ public class MapFragment extends Fragment {
     private ToggleButton floor3;
     private ToggleButton floor4;
     private ToggleButton floor5;
-    private ImageView floorMap;
+    //private ImageView floorMap;
+    private PhotoView floorMap;
 
     private OnFragmentInteractionListener mListener;
 
@@ -72,7 +75,8 @@ public class MapFragment extends Fragment {
         floorToggle = (RadioGroup) view.findViewById(R.id.floor_toggle);
         floorToggle.setOnCheckedChangeListener(ToggleListener);
 
-        floorMap = (ImageView) view.findViewById(R.id.floor_map);
+//        floorMap = (ImageView) view.findViewById(R.id.floor_map);
+        floorMap = (PhotoView) view.findViewById(R.id.floor_map);
 
         // TODO: change based on which floor the board is on
         floorG.setChecked(true);

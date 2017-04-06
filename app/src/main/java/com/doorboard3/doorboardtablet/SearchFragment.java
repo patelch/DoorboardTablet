@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
+import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
@@ -23,6 +24,8 @@ import android.widget.MultiAutoCompleteTextView;
 import android.widget.SearchView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.github.chrisbanes.photoview.PhotoView;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
@@ -65,12 +68,12 @@ public class SearchFragment extends Fragment {
 
 
         ArrayList<RoomOwner> data = new ArrayList<RoomOwner>();
-        data.add(new RoomOwner("Professor A", "some stuff", R.drawable.user, "001"));
-        data.add(new RoomOwner("Professor B", "some stuff", R.drawable.user, "002"));
-        data.add(new RoomOwner("Teacher A", "some stuff", R.drawable.user, "101"));
-        data.add(new RoomOwner("Teacher B", "some stuff", R.drawable.user, "201"));
-        data.add(new RoomOwner("TA A", "some stuff", R.drawable.user, "301"));
-        data.add(new RoomOwner("TA B", "some stuff", R.drawable.user, "402"));
+        data.add(new RoomOwner("Professor A", "some stuff", R.drawable.user, "001", "profA@cs.umd.edu", "(123) 456 - 7890"));
+        data.add(new RoomOwner("Professor B", "some stuff", R.drawable.user, "002", "profB@cs.umd.edu", "(123) 456 - 7890"));
+        data.add(new RoomOwner("Teacher A", "some stuff", R.drawable.user, "101", "teachA@cs.umd.edu", "(123) 456 - 7890"));
+        data.add(new RoomOwner("Teacher B", "some stuff", R.drawable.user, "201", "teachB@cs.umd.edu", "(123) 456 - 7890"));
+        data.add(new RoomOwner("TA A", "some stuff", R.drawable.user, "301", "taA@cs.umd.edu", "(123) 456 - 7890"));
+        data.add(new RoomOwner("TA B", "some stuff", R.drawable.user, "402", "taB@cs.umd.edu", "(123) 456 - 7890"));
         final SearchAdapter adapter = new SearchAdapter(view.getContext(), R.layout.fragment_search, data);
         search.setAdapter(adapter);
 
@@ -85,19 +88,31 @@ public class SearchFragment extends Fragment {
 
                 RoomOwner person = adapter.getItem(position);
 
-                search.setText(person.getName() + " -- " + person.getRoomNum());
+                search.setText(person.getName());
 
                 TextView name = (TextView) dialog.findViewById(R.id.dialog_name);
                 name.setText(person.getName());
 
                 TextView roomNum = (TextView) dialog.findViewById(R.id.dialog_room_num);
-                roomNum.setText(person.getRoomNum());
+                roomNum.setText("Room " + person.getRoomNum());
 
                 TextView description = (TextView) dialog.findViewById(R.id.dialog_description);
                 description.setText(person.getDescription());
 
+                TextView phoneNum = (TextView) dialog.findViewById(R.id.dialog_phone_num);
+                phoneNum.setText(person.getPhoneNumber());
+
+                TextView email = (TextView) dialog.findViewById(R.id.dialog_email);
+                email.setText(person.getEmail());
+
                 ImageView image = (ImageView) dialog.findViewById(R.id.dialog_image);
                 image.setImageResource(person.getImage());
+
+                PhotoView start = (PhotoView) dialog.findViewById(R.id.start_map);
+                start.setImageResource(R.drawable.floor_start);
+
+                PhotoView end = (PhotoView) dialog.findViewById(R.id.end_map);
+                end.setImageResource(R.drawable.floor_end);
 
                 ImageButton closeDialog = (ImageButton) dialog.findViewById(R.id.dialog_close);
                 closeDialog.setOnClickListener(new View.OnClickListener() {
@@ -108,8 +123,18 @@ public class SearchFragment extends Fragment {
                 });
 
                 dialog.show();
+
+                WindowManager.LayoutParams lp = new WindowManager.LayoutParams();
+                Window window = dialog.getWindow();
+                lp.copyFrom(window.getAttributes());
+//This makes the dialog take up the full width
+                lp.width = WindowManager.LayoutParams.MATCH_PARENT;
+                lp.height = WindowManager.LayoutParams.WRAP_CONTENT;
+                window.setAttributes(lp);
             }
         });
+
+
 
 
         return view;

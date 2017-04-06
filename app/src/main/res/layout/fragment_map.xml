@@ -6,81 +6,119 @@
     tools:context="com.doorboard3.doorboardtablet.MapFragment">
 
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal">
+        android:layout_height="match_parent">
 
         <RadioGroup
             android:id="@+id/floor_toggle"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_marginTop="24dp"
+            android:layout_alignBottom="@+id/floor_map"
+            android:layout_alignTop="@+id/floor_map"
             android:layout_weight="1"
             android:orientation="vertical">
 
             <ToggleButton
                 android:id="@+id/floor_g"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="200dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
                 android:onClick="onFloorToggle"
                 android:text="Ground"
                 android:textOff="Ground"
-                android:textOn="Ground" />
+                android:textOn="Ground"
+                android:textSize="16sp" />
 
             <ToggleButton
                 android:id="@+id/floor_1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="200dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
                 android:onClick="onFloorToggle"
                 android:text="First"
                 android:textOff="First"
-                android:textOn="First" />
+                android:textOn="First"
+                android:textSize="16sp" />
 
             <ToggleButton
                 android:id="@+id/floor_2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="200dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
                 android:onClick="onFloorToggle"
                 android:text="Second"
                 android:textOff="Second"
-                android:textOn="Second" />
+                android:textOn="Second"
+                android:textSize="16sp" />
 
             <ToggleButton
                 android:id="@+id/floor_3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="200dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
                 android:onClick="onFloorToggle"
                 android:text="Third"
                 android:textOff="Third"
-                android:textOn="Third" />
+                android:textOn="Third"
+                android:textSize="16sp" />
 
             <ToggleButton
                 android:id="@+id/floor_4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="200dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
                 android:onClick="onFloorToggle"
                 android:text="Fourth"
                 android:textOff="Fourth"
-                android:textOn="Fourth" />
+                android:textOn="Fourth"
+                android:textSize="16sp" />
 
             <ToggleButton
                 android:id="@+id/floor_5"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="200dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
                 android:onClick="onFloorToggle"
                 android:text="Fifth"
                 android:textOff="Fifth"
-                android:textOn="Fifth" />
+                android:textOn="Fifth"
+                android:textSize="16sp" />
         </RadioGroup>
 
-        <ImageView
+
+        <com.github.chrisbanes.photoview.PhotoView
             android:id="@+id/floor_map"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="false"
+            android:layout_centerInParent="false"
+            android:layout_centerVertical="false"
+            android:layout_toRightOf="@+id/floor_toggle"
             android:layout_weight="4"
-            app:srcCompat="@color/cardview_dark_background" />
-    </LinearLayout>
+            android:isScrollContainer="true"
+            android:minHeight="17dp" />
+
+        <!--<ImageView-->
+            <!--android:id="@+id/floor_map"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerHorizontal="false"-->
+            <!--android:layout_centerInParent="false"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_toRightOf="@+id/floor_toggle"-->
+            <!--android:layout_weight="4"-->
+            <!--android:adjustViewBounds="true"-->
+            <!--app:srcCompat="@color/cardview_dark_background" />-->
+
+    </RelativeLayout>
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:orientation="horizontal">-->
+
+    <!--</LinearLayout>-->
 
 
 </FrameLayout>
