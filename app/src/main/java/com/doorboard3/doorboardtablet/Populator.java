@@ -93,7 +93,7 @@ public class Populator {
             wdb.insert(DoorboardContract.ScheduleEntry.TABLE_NAME, null, values);
 
             values = new ContentValues();
-            values.put(DoorboardContract.ScheduleEntry.COLUMN_NAME_DATE, "Mon, April 10, 2017");
+            values.put(DoorboardContract.ScheduleEntry.COLUMN_NAME_DATE, "Fri, April 07, 2017");
             values.put(DoorboardContract.ScheduleEntry.COLUMN_NAME_NAME, "Test 3");
             values.put(DoorboardContract.ScheduleEntry.COLUMN_NAME_START_TIME, "08:00");
             values.put(DoorboardContract.ScheduleEntry.COLUMN_NAME_END_TIME, "09:00");
