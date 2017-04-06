@@ -3,7 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.doorboard3.doorboardtablet.InfoFragment"
-    android:baselineAligned="false">
+    android:baselineAligned="false"
+    >
 
     <!--<TextView-->
     <!--android:id="@+id/name"-->
@@ -16,92 +17,92 @@
 
 
     <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="275dp"
+        android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:layout_weight="1.28"
-        android:fillViewport="true">
+        android:fadeScrollbars="false"
+        android:fillViewport="true"
+        android:layout_weight="0.76">
 
         <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:tools="http://schemas.android.com/tools"
-            android:layout_width="275dp"
+            android:layout_width="290dp"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:baselineAligned="false">
+            android:baselineAligned="false"
+            android:gravity="center"
+            android:orientation="vertical">
 
             <TextView
                 android:layout_width="275dp"
                 android:layout_height="wrap_content"
                 android:text="\tRoom 003 Profile:"
                 android:textColor="#000000"
-                android:textStyle="bold"
-                android:textSize="27dp" />
+                android:textSize="27dp"
+                android:textStyle="bold" />
+
             <TextView
-                android:layout_width="275dp"
+                android:layout_width="246dp"
                 android:layout_height="69dp"
                 android:text="\tDaniel Chen"
                 android:textColor="#525252"
-                android:textStyle="bold"
-                android:textSize="30dp" />
+                android:textSize="30dp"
+                android:textStyle="bold" />
 
             <ImageView
+                android:id="@+id/imageView"
                 android:layout_width="match_parent"
                 android:layout_height="242dp"
                 android:layout_marginLeft="10dp"
                 android:gravity="center"
                 android:scaleType="centerCrop"
                 android:src="@drawable/ic_profile_1" />
-            <TextView
-                android:layout_width="275dp"
-                android:layout_height="wrap_content"
-                android:text="\tEmail: \n\t cmsc434@umd.edu\n\tPhone: \n\t 111-222-3333"
-                android:textSize="20dp"
-                android:textColor="#525252"
-                />
 
             <TextView
-                android:layout_width="275dp"
+                android:layout_width="246dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1.28"
-                android:text="\tInfo: \n\t Here is my info! "
-                android:textSize="20dp"
+                android:text="\tEmail: \n\t cmsc434@umd.edu\n\tPhone: \n\t 111-222-3333"
                 android:textColor="#525252"
-                />
+                android:textSize="20dp" />
+
             <TextView
-                android:layout_width="275dp"
+                android:layout_width="246dp"
+                android:layout_height="wrap_content"
+                android:text="\tInfo: \n\t Here is my info! "
+                android:textColor="#525252"
+                android:textSize="20dp" />
+
+            <TextView
+                android:layout_width="246dp"
                 android:layout_height="wrap_content"
                 android:text="\n\tTestudo"
                 android:textColor="#525252"
-                android:textStyle="bold"
-                android:textSize="30dp" />
+                android:textSize="30dp"
+                android:textStyle="bold" />
 
             <ImageView
-                android:layout_width="match_parent"
+                android:layout_width="246dp"
                 android:layout_height="242dp"
                 android:layout_marginLeft="10dp"
                 android:gravity="center"
                 android:scaleType="centerCrop"
                 android:src="@drawable/ic_profile_2" />
+
             <TextView
-                android:layout_width="275dp"
+                android:layout_width="246dp"
                 android:layout_height="wrap_content"
                 android:text="\tWebsite: \n\t testudo.umd.edu\n\tEmail: \n\t testudo@umd.edu"
-                android:textSize="20dp"
                 android:textColor="#525252"
-                />
+                android:textSize="20dp" />
+
             <TextView
-                android:layout_width="275dp"
+                android:layout_width="246dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1.28"
                 android:text="\tInfo: \n\t I am University of Maryland's \n\t mascot! \n\n"
-                android:textSize="20dp"
                 android:textColor="#525252"
-                />
+                android:textSize="20dp" />
         </LinearLayout>
     </ScrollView>
-    <View
-        android:layout_width="1dp"
-        android:layout_height="match_parent"
-        android:background="@android:color/darker_gray" />
+
 
     <android.support.v7.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/message_list"
