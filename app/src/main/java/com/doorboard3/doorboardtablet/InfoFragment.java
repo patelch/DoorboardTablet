@@ -1,5 +1,8 @@
 package com.doorboard3.doorboardtablet;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.media.ThumbnailUtils;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -8,6 +11,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import java.util.ArrayList;
 
@@ -24,6 +28,8 @@ public class InfoFragment extends Fragment {
     private RecyclerView mRecyclerView;
     private RecyclerView.Adapter mAdapter;
     private DoorboardDbHelper dbHelper;
+    private ImageView profile1;
+    private ImageView profile2;
     private String room;
     private Bundle bundle;
 
@@ -53,6 +59,9 @@ public class InfoFragment extends Fragment {
         View v = inflater.inflate(R.layout.fragment_info, container, false);
         Log.i(TAG, "Inflate the layout");
 
+        profile1 = (ImageView) v.findViewById(R.id.profile_pic_1);
+        Bitmap b1 = BitmapFactory.decodeResource(getContext().getResources(), R.mipmap.ic_profile_pic_test);
+        profile1.setImageBitmap(ThumbnailUtils.extractThumbnail(b1, 300, 300));
 
         // Set the room
         bundle = this.getActivity().getIntent().getExtras();

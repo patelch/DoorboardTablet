@@ -31,7 +31,7 @@
             <TextView
                 android:layout_width="275dp"
                 android:layout_height="wrap_content"
-                android:text="\tRoom 003 Profile:"
+                android:text="\tFaculty in Room 003:"
                 android:textColor="#000000"
                 android:textStyle="bold"
                 android:textSize="27dp" />
@@ -43,13 +43,22 @@
                 android:textStyle="bold"
                 android:textSize="30dp" />
 
+            <!--<ImageView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="242dp"-->
+                <!--android:layout_marginLeft="10dp"-->
+                <!--android:gravity="center"-->
+                <!--android:scaleType="centerCrop"-->
+                <!--android:src="@drawable/ic_profile_1" />-->
+
             <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="242dp"
-                android:layout_marginLeft="10dp"
+                android:id="@+id/profile_pic_1"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
                 android:gravity="center"
-                android:scaleType="centerCrop"
-                android:src="@drawable/ic_profile_1" />
+                android:layout_marginLeft="10dp"
+                android:scaleType="centerCrop" />
+
             <TextView
                 android:layout_width="275dp"
                 android:layout_height="wrap_content"
@@ -98,15 +107,33 @@
                 />
         </LinearLayout>
     </ScrollView>
+
     <View
         android:layout_width="1dp"
         android:layout_height="match_parent"
         android:background="@android:color/darker_gray" />
 
-    <android.support.v7.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/message_list"
-        android:layout_width="500dp"
+    <LinearLayout
+        android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_weight="7.38" />
+        android:orientation="vertical"
+        android:baselineAligned="false"
+        android:layout_weight="7.38" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="\tMessages"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:textSize="27sp" />
+
+        <android.support.v7.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/message_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
 
 </LinearLayout>
