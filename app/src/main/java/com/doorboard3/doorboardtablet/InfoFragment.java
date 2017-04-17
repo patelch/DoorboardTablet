@@ -59,9 +59,9 @@ public class InfoFragment extends Fragment {
         View v = inflater.inflate(R.layout.fragment_info, container, false);
         Log.i(TAG, "Inflate the layout");
 
-        profile1 = (ImageView) v.findViewById(R.id.profile_pic_1);
-        Bitmap b1 = BitmapFactory.decodeResource(getContext().getResources(), R.mipmap.ic_profile_pic_test);
-        profile1.setImageBitmap(ThumbnailUtils.extractThumbnail(b1, 300, 300));
+        //profile1 = (ImageView) v.findViewById(R.id.profile_pic_1);
+        //Bitmap b1 = BitmapFactory.decodeResource(getContext().getResources(), R.mipmap.ic_profile_pic_test);
+        //profile1.setImageBitmap(ThumbnailUtils.extractThumbnail(b1, 300, 300));
 
         // Set the room
         bundle = this.getActivity().getIntent().getExtras();
