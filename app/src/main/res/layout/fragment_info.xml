@@ -50,7 +50,7 @@
             <TextView
                 android:layout_width="246dp"
                 android:layout_height="69dp"
-                android:text="\tDaniel Chen"
+                android:text="\tDavid Mount"
                 android:textColor="#525252"
                 android:textSize="30dp"
                 android:textStyle="bold" />
@@ -85,43 +85,43 @@
                 android:textColor="#525252"
                 android:textSize="20dp" />
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="3dp"
-                android:layout_marginBottom="10dp"
-                android:layout_marginTop="10dp"
-                android:background="@android:color/darker_gray" />
+            <!--<View-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="3dp"-->
+                <!--android:layout_marginBottom="10dp"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:background="@android:color/darker_gray" />-->
 
-            <TextView
-                android:layout_width="246dp"
-                android:layout_height="wrap_content"
-                android:text="\n\tTestudo"
-                android:textColor="#525252"
-                android:textSize="30dp"
-                android:textStyle="bold" />
+            <!--<TextView-->
+                <!--android:layout_width="246dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="\n\tTestudo"-->
+                <!--android:textColor="#525252"-->
+                <!--android:textSize="30dp"-->
+                <!--android:textStyle="bold" />-->
 
-            <ImageView
-                android:layout_width="246dp"
-                android:layout_height="242dp"
-                android:layout_marginLeft="10dp"
-                android:gravity="center"
-                android:scaleType="centerCrop"
-                android:src="@drawable/ic_profile_2" />
+            <!--<ImageView-->
+                <!--android:layout_width="246dp"-->
+                <!--android:layout_height="242dp"-->
+                <!--android:layout_marginLeft="10dp"-->
+                <!--android:gravity="center"-->
+                <!--android:scaleType="centerCrop"-->
+                <!--android:src="@drawable/ic_profile_2" />-->
 
-            <TextView
-                android:layout_width="246dp"
-                android:layout_height="wrap_content"
-                android:text="\tWebsite: \n\t testudo.umd.edu\n\tEmail: \n\t testudo@umd.edu"
-                android:textColor="#525252"
-                android:textSize="20dp" />
+            <!--<TextView-->
+                <!--android:layout_width="246dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="\tWebsite: \n\t testudo.umd.edu\n\tEmail: \n\t testudo@umd.edu"-->
+                <!--android:textColor="#525252"-->
+                <!--android:textSize="20dp" />-->
 
-            <TextView
-                android:layout_width="246dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1.28"
-                android:text="\tInfo: \n\t I am University of \n\t Maryland's mascot! \n\n"
-                android:textColor="#525252"
-                android:textSize="20dp" />
+            <!--<TextView-->
+                <!--android:layout_width="246dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="1.28"-->
+                <!--android:text="\tInfo: \n\t I am University of \n\t Maryland's mascot! \n\n"-->
+                <!--android:textColor="#525252"-->
+                <!--android:textSize="20dp" />-->
         </LinearLayout>
     </ScrollView>
 

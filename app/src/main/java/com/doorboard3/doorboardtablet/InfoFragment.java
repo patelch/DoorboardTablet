@@ -60,18 +60,18 @@ public class InfoFragment extends Fragment {
         Log.i(TAG, "Inflate the layout");
 
         profile1 = (ImageView) v.findViewById(R.id.profile_pic_1);
-        Bitmap b1 = BitmapFactory.decodeResource(getContext().getResources(), R.mipmap.ic_profile_pic_test);
+        Bitmap b1 = BitmapFactory.decodeResource(getContext().getResources(), R.mipmap.ic_mount);
         profile1.setImageBitmap(ThumbnailUtils.extractThumbnail(b1, 300, 300));
 
-        // Set the room
-        bundle = this.getActivity().getIntent().getExtras();
-        if (bundle != null && bundle.getBoolean("UPDATE")) {
-            Log.i(TAG, "UPDATE is true");
-            room = bundle.getString("ROOM");
-        } else {
-            room = "Iribe 003";
-        }
-        Log.i(TAG, "Room: " + room);
+//        // Set the room
+//        bundle = this.getActivity().getIntent().getExtras();
+//        if (bundle != null && bundle.getBoolean("UPDATE")) {
+//            Log.i(TAG, "UPDATE is true");
+//            room = bundle.getString("ROOM");
+//        } else {
+//            room = "Iribe 003";
+//        }
+//        Log.i(TAG, "Room: " + room);
 
         // Get messages
         mRecyclerView = (RecyclerView) v.findViewById(R.id.message_list);
